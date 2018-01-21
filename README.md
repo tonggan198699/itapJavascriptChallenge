@@ -12,4 +12,4 @@ Create a single page application that consumes data from StarWarApi
 - Anything you can think of to improve the app!
 You can see a working sample here, to help clarify: http://output.jsbin.com/mememoy
 
-<p align="center"><img src="https://ibb.co/jSBMKG"></p>
+<p align="center"><img src="https://image.ibb.co/hk98zG/star_War_Api.jpg"></p>
