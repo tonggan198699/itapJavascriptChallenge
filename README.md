@@ -11,3 +11,5 @@ Create a single page application that consumes data from StarWarApi
 - Add some CSS to prettify the application
 - Anything you can think of to improve the app!
 You can see a working sample here, to help clarify: http://output.jsbin.com/mememoy
+
+<p align="center"><img src="https://ibb.co/jSBMKG"></p>
