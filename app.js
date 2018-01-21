@@ -4,6 +4,22 @@ $(function() {
     $('#table').removeAttr("style").hide();
 });
 
+function search(){
+  let myInput = document.querySelector("#myInput");
+  $(myInput).on('keyup', function() {
+
+    let searchItem = $(this).val().toLowerCase();
+    $("#table tbody tr").each(function() {
+        let str = $(this).text().toLowerCase();
+        if(str.indexOf(searchItem) < 0){
+          $(this).hide();
+        }else{
+          $(this).show();
+        }
+    });
+  });
+}
+
 function getPeople() {
 
     let apiPeopleUrl = "https://swapi.co/api/people/";
@@ -38,7 +54,6 @@ function getPeople() {
 
     $('#table').removeAttr("style").show();
     $("#films_thead").removeAttr("style").hide();
-    $("#films_tbody").removeAttr("style").hide();
   });
 
 }
@@ -74,17 +89,12 @@ function getFilms() {
 
     $("#table").css("display", "block");
     $("#people_thead").css("display", "none");
-    $("#people_tbody").css("display", "none");
   });
 
 }
 
-
-
 function displayInfo() {
-
   let selected = $('#selectable option:selected');
-
   if(selected.text() == "people") {
     return getPeople();
   }else if(selected.text() == "films") {
@@ -94,7 +104,5 @@ function displayInfo() {
   }
 
 }
-
-
 
 button.addEventListener('click', displayInfo);
